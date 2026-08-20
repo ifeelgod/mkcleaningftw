@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get an Instant Quote | Madame Katherine's Quality Cleaning Services</title>
+  <meta name="description" content="Calculate your customized house cleaning estimate instantly. Select bedrooms, bathrooms, service type, and book online for Fort Worth & DFW.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emerald: {
+              950: '#1e0b3d',
+              900: '#2e1065',
+              850: '#3b0764',
+              800: '#4c1d95',
+              700: '#6d28d9',
+              200: '#e9d5ff',
+              100: '#f3e8ff',
+              50: '#faf5ff',
+            },
+            gold: {
+              700: '#b45309',
+              600: '#d97706',
+              500: '#f59e0b',
+              100: '#fef3c7',
+            }
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen text-gray-800">
+
+  <!-- TOP BAR -->
+  <div class="bg-emerald-900 text-white py-2 px-4 text-sm font-sans">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-gold-500"></i> Licensed & Insured</span>
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-award text-gold-500"></i> 100% Satisfaction Guarantee</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="hidden md:inline"><i class="fa-regular fa-clock text-gold-500"></i> Monday - Saturday</span>
+        <a href="tel:+16823198761" class="text-gold-500 hover:text-gold-100 font-semibold flex items-center gap-1.5 transition">
+          <i class="fa-solid fa-phone"></i> (682) 319-8761
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY HEADER -->
+  <header class="sticky top-0 z-50 glass shadow-sm border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-full border-2 border-gold-600 flex items-center justify-content-center bg-emerald-900 shadow-md group-hover:scale-105 transition-transform duration-300">
+          <span class="font-serif text-2xl font-bold text-gold-500 tracking-wider flex items-center justify-center w-full h-full">K</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-lg md:text-xl font-bold text-emerald-900 leading-tight">Madame Katherine's</span>
+          <span class="text-xs uppercase tracking-widest text-gold-700 font-semibold">Quality Cleaning Services</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-8 font-sans font-medium text-gray-700">
+        <a href="index.html" class="hover:text-emerald-800 pb-1 transition-colors">Home</a>
+        <a href="services.html" class="hover:text-emerald-800 pb-1 transition-colors">Services</a>
+        <a href="about.html" class="hover:text-emerald-800 pb-1 transition-colors">About Us</a>
+        <a href="locations.html" class="hover:text-emerald-800 pb-1 transition-colors">Locations</a>
+        <a href="booking.html" class="text-emerald-800 border-b-2 border-gold-600 pb-1">Book Now</a>
+      </nav>
+
+      <!-- CTA Action Button -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="booking.html" class="px-5 py-2.5 rounded-full text-white font-medium bg-gradient-to-r from-emerald-800 to-emerald-950 hover:from-emerald-900 hover:to-emerald-950 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 min-h-[48px] flex items-center">
+          Calculate Instantly
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md text-emerald-900 hover:bg-emerald-50 focus:outline-none min-w-[48px] min-h-[48px]" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-200 bg-white">
+      <div class="px-4 py-3 space-y-2">
+        <a href="index.html" class="block px-3 py-2.5 rounded-md text-base font-medium text-gray-700 hover:text-emerald-900 hover:bg-emerald-50">Home</a>
+        <a href="services.html" class="block px-3 py-2.5 rounded-md text-base font-medium text-gray-700 hover:text-emerald-900 hover:bg-emerald-50">Services</a>
+        <a href="about.html" class="block px-3 py-2.5 rounded-md text-base font-medium text-gray-700 hover:text-emerald-900 hover:bg-emerald-50">About Us</a>
+        <a href="locations.html" class="block px-3 py-2.5 rounded-md text-base font-medium text-gray-700 hover:text-emerald-900 hover:bg-emerald-50">Locations</a>
+        <a href="booking.html" class="block px-3 py-2.5 rounded-md text-base font-medium text-emerald-900 bg-emerald-50">Book Now</a>
+        <div class="pt-4 border-t border-gray-200 flex flex-col gap-3">
+          <a href="tel:+16823198761" class="text-center py-2.5 rounded-md border-2 border-emerald-800 text-emerald-800 font-semibold flex items-center justify-center gap-2 min-h-[48px]">
+            <i class="fa-solid fa-phone"></i> Call (682) 319-8761
+          </a>
+          <a href="booking.html" class="text-center py-2.5 rounded-md bg-gradient-to-r from-gold-600 to-gold-700 text-white font-semibold flex items-center justify-center min-h-[48px]">
+            Calculate Instantly
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CALCULATOR TITLE SECTION -->
+  <section class="py-12 bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span class="text-gold-700 font-semibold uppercase tracking-wider text-sm">Instant Estimator</span>
+      <h1 class="font-serif text-4xl sm:text-5xl font-bold text-emerald-900">Secure Your Instant Estimate</h1>
+      <div class="h-1 w-20 bg-gold-600 mx-auto"></div>
+      <p class="text-gray-600 text-lg max-w-xl mx-auto font-sans">
+        Select your home details below to calculate your cleaning cost instantly. No hidden fees.
+      </p>
+    </div>
+  </section>
+
+  <!-- CALCULATOR ENGINE ROW -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Interactive Form (Left Column) -->
+      <form id="quote-form" class="lg:col-span-8 bg-white p-8 rounded-2xl shadow-xl border border-gray-200 space-y-8 font-sans">
+        
+        <!-- Step 1: Contact Details -->
+        <div>
+          <h2 class="font-serif text-2xl font-bold text-emerald-950 mb-4 pb-2 border-b border-gray-100 flex items-center gap-2">
+            <span class="w-8 h-8 rounded-full bg-emerald-900 text-white flex items-center justify-center text-sm font-sans">1</span>
+            Contact Information
+          </h2>
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div>
+              <label for="client-name" class="block text-sm font-bold text-gray-700 mb-2">Full Name *</label>
+              <input type="text" id="client-name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-800 transition" placeholder="John Doe">
+            </div>
+            <div>
+              <label for="client-phone" class="block text-sm font-bold text-gray-700 mb-2">Phone Number *</label>
+              <input type="tel" id="client-phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-800 transition" placeholder="(682) 555-0199">
+            </div>
+            <div class="sm:col-span-2">
+              <label for="client-address" class="block text-sm font-bold text-gray-700 mb-2">Service Address *</label>
+              <input type="text" id="client-address" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-800 transition" placeholder="123 Main St, Fort Worth, TX">
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Sizing parameters -->
+        <div>
+          <h2 class="font-serif text-2xl font-bold text-emerald-950 mb-4 pb-2 border-b border-gray-100 flex items-center gap-2">
+            <span class="w-8 h-8 rounded-full bg-emerald-900 text-white flex items-center justify-center text-sm font-sans">2</span>
+            Size of Your Space
+          </h2>
+          <div class="grid sm:grid-cols-2 gap-8">
+            <!-- Bedrooms Select -->
+            <div>
+              <label for="beds-count" class="block text-sm font-bold text-gray-700 mb-3">Bedrooms *</label>
+              <select id="beds-count" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-800 transition bg-white">
+                <option value="110">1 Bedroom ($110)</option>
+                <option value="150">2 Bedrooms ($150)</option>
+                <option value="190" selected>3 Bedrooms ($190)</option>
+                <option value="240">4 Bedrooms ($240)</option>
+                <option value="300">5+ Bedrooms ($300)</option>
+              </select>
+            </div>
+
+            <!-- Bathrooms Counter (plus/minus controls) -->
+            <div>
+              <label class="block text-sm font-bold text-gray-700 mb-3">Bathrooms *</label>
+              <div class="flex items-center gap-3">
+                <button type="button" id="btn-bath-minus" class="w-12 h-12 rounded-lg bg-gray-100 hover:bg-gray-200 border border-gray-300 flex items-center justify-center text-xl font-bold text-gray-700 transition focus:outline-none min-h-[48px] min-w-[48px]">-</button>
+                <input type="text" id="bath-count" value="2" readonly class="w-16 py-3 text-center border border-gray-300 rounded-lg font-bold text-lg focus:outline-none bg-white">
+                <button type="button" id="btn-bath-plus" class="w-12 h-12 rounded-lg bg-gray-100 hover:bg-gray-200 border border-gray-300 flex items-center justify-center text-xl font-bold text-gray-700 transition focus:outline-none min-h-[48px] min-w-[48px]">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Type & Frequency -->
+        <div>
+          <h2 class="font-serif text-2xl font-bold text-emerald-950 mb-4 pb-2 border-b border-gray-100 flex items-center gap-2">
+            <span class="w-8 h-8 rounded-full bg-emerald-900 text-white flex items-center justify-center text-sm font-sans">3</span>
+            Cleaning Style & Frequency
+          </h2>
+          <div class="grid sm:grid-cols-2 gap-8">
+            <!-- Clean Type -->
+            <div>
+              <label class="block text-sm font-bold text-gray-700 mb-3">Service Type *</label>
+              <div class="space-y-3">
+                <label class="flex items-center gap-3 p-3 rounded-lg border border-gray-200 hover:bg-gray-50 cursor-pointer transition">
+                  <input type="radio" name="clean-type" value="1.0" checked class="w-5 h-5 text-emerald-950 border-gray-300 focus:ring-emerald-800">
+                  <div>
+                    <p class="font-bold text-sm text-emerald-950">Standard Clean</p>
+                    <p class="text-xs text-gray-500">Regular maintenance (1.0x)</p>
+                  </div>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-lg border border-gray-200 hover:bg-gray-50 cursor-pointer transition">
+                  <input type="radio" name="clean-type" value="1.5" class="w-5 h-5 text-emerald-950 border-gray-300 focus:ring-emerald-800">
+                  <div>
+                    <p class="font-bold text-sm text-emerald-950">Deep Clean</p>
+                    <p class="text-xs text-gray-500">Thorough sanitization (1.5x)</p>
+                  </div>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-lg border border-gray-200 hover:bg-gray-50 cursor-pointer transition">
+                  <input type="radio" name="clean-type" value="1.8" class="w-5 h-5 text-emerald-950 border-gray-300 focus:ring-emerald-800">
+                  <div>
+                    <p class="font-bold text-sm text-emerald-950">Move-In/Out Clean</p>
+                    <p class="text-xs text-gray-500">Complete vacant detailing (1.8x)</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Frequency -->
+            <div>
+              <label class="block text-sm font-bold text-gray-700 mb-3">Service Frequency *</label>
+              <div class="space-y-3">
+                <label class="flex items-center gap-3 p-3 rounded-lg border border-gray-200 hover:bg-gray-50 cursor-pointer transition">
+                  <input type="radio" name="clean-frequency" value="0" checked class="w-5 h-5 text-emerald-950 border-gray-300 focus:ring-emerald-800">
+                  <div>
+                    <p class="font-bold text-sm text-emerald-950">One-Time Service</p>
+                    <p class="text-xs text-gray-500">Standard rate (0% off)</p>
+                  </div>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-lg border border-gray-200 hover:bg-gray-50 cursor-pointer transition">
+                  <input type="radio" name="clean-frequency" value="0.15" class="w-5 h-5 text-emerald-950 border-gray-300 focus:ring-emerald-800">
+                  <div>
+                    <p class="font-bold text-sm text-emerald-950">Weekly Cleaning</p>
+                    <p class="text-xs text-emerald-500 font-semibold text-emerald-850">Save 15% recurring</p>
+                  </div>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-lg border border-gray-200 hover:bg-gray-50 cursor-pointer transition">
+                  <input type="radio" name="clean-frequency" value="0.10" class="w-5 h-5 text-emerald-950 border-gray-300 focus:ring-emerald-800">
+                  <div>
+                    <p class="font-bold text-sm text-emerald-950">Bi-Weekly Cleaning</p>
+                    <p class="text-xs text-emerald-500 font-semibold text-emerald-850">Save 10% recurring</p>
+                  </div>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-lg border border-gray-200 hover:bg-gray-50 cursor-pointer transition">
+                  <input type="radio" name="clean-frequency" value="0.05" class="w-5 h-5 text-emerald-950 border-gray-300 focus:ring-emerald-800">
+                  <div>
+                    <p class="font-bold text-sm text-emerald-950">Monthly Cleaning</p>
+                    <p class="text-xs text-emerald-500 font-semibold text-emerald-850">Save 5% recurring</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Optional Add-ons -->
+        <div>
+          <h2 class="font-serif text-2xl font-bold text-emerald-950 mb-4 pb-2 border-b border-gray-100 flex items-center gap-2">
+            <span class="w-8 h-8 rounded-full bg-emerald-900 text-white flex items-center justify-center text-sm font-sans">4</span>
+            Premium Add-ons
+          </h2>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <!-- Oven -->
+            <label class="flex items-center justify-between p-4 rounded-xl border border-gray-200 hover:bg-gray-50 cursor-pointer transition select-none">
+              <span class="flex items-center gap-3 font-semibold text-emerald-950 text-sm">
+                <input type="checkbox" id="add-oven" value="25" class="w-5 h-5 text-emerald-950 border-gray-300 focus:ring-emerald-800 rounded">
+                Inside Oven
+              </span>
+              <span class="text-sm font-bold text-gold-700">+$25</span>
+            </label>
+
+            <!-- Fridge -->
+            <label class="flex items-center justify-between p-4 rounded-xl border border-gray-200 hover:bg-gray-50 cursor-pointer transition select-none">
+              <span class="flex items-center gap-3 font-semibold text-emerald-950 text-sm">
+                <input type="checkbox" id="add-fridge" value="25" class="w-5 h-5 text-emerald-950 border-gray-300 focus:ring-emerald-800 rounded">
+                Inside Fridge
+              </span>
+              <span class="text-sm font-bold text-gold-700">+$25</span>
+            </label>
+
+            <!-- Cabinets -->
+            <label class="flex items-center justify-between p-4 rounded-xl border border-gray-200 hover:bg-gray-50 cursor-pointer transition select-none">
+              <span class="flex items-center gap-3 font-semibold text-emerald-950 text-sm">
+                <input type="checkbox" id="add-cabinets" value="30" class="w-5 h-5 text-emerald-950 border-gray-300 focus:ring-emerald-800 rounded">
+                Inside Cabinets
+              </span>
+              <span class="text-sm font-bold text-gold-700">+$30</span>
+            </label>
+
+            <!-- Windows -->
+            <label class="flex items-center justify-between p-4 rounded-xl border border-gray-200 hover:bg-gray-50 cursor-pointer transition select-none">
+              <span class="flex items-center gap-3 font-semibold text-emerald-950 text-sm">
+                <input type="checkbox" id="add-windows" value="40" class="w-5 h-5 text-emerald-950 border-gray-300 focus:ring-emerald-800 rounded">
+                Inside Windows
+              </span>
+              <span class="text-sm font-bold text-gold-700">+$40</span>
+            </label>
+
+            <!-- Floor Buffing -->
+            <label class="flex items-center justify-between p-4 rounded-xl border border-gray-200 hover:bg-gray-50 cursor-pointer transition select-none">
+              <span class="flex items-center gap-3 font-semibold text-emerald-950 text-sm">
+                <input type="checkbox" id="add-buffing" value="70" class="w-5 h-5 text-emerald-950 border-gray-300 focus:ring-emerald-800 rounded">
+                Floor Buffing
+              </span>
+              <span class="text-sm font-bold text-gold-700">+$70</span>
+            </label>
+
+            <!-- Carpet Shampooing -->
+            <label class="flex items-center justify-between p-4 rounded-xl border border-gray-200 hover:bg-gray-50 cursor-pointer transition select-none">
+              <span class="flex items-center gap-3 font-semibold text-emerald-950 text-sm">
+                <input type="checkbox" id="add-shampoo" value="80" class="w-5 h-5 text-emerald-950 border-gray-300 focus:ring-emerald-800 rounded">
+                Carpet Shampooing
+              </span>
+              <span class="text-sm font-bold text-gold-700">+$80</span>
+            </label>
+          </div>
+        </div>
+      </form>
+
+      <!-- Side panel Summary Card (Right Column) -->
+      <div class="lg:col-span-4 space-y-8 sticky top-24">
+        <!-- Estimate Output Card -->
+        <div class="bg-gradient-to-br from-emerald-900 to-emerald-950 text-white p-8 rounded-2xl shadow-xl border border-gold-600/30 flex flex-col justify-between font-sans">
+          <div class="space-y-6">
+            <h3 class="font-serif text-2xl font-bold text-gold-500">Estimate Details</h3>
+            <div class="h-0.5 w-16 bg-gold-600"></div>
+            
+            <div class="space-y-3 text-sm text-emerald-100">
+              <div class="flex justify-between">
+                <span>Rooms Base:</span>
+                <span id="summary-base-price" class="font-semibold font-mono">$190.00</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Bathrooms Add:</span>
+                <span id="summary-bath-price" class="font-semibold font-mono">$70.00</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Service Modifier:</span>
+                <span id="summary-modifier" class="font-semibold font-mono">1.0x</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Frequency Discount:</span>
+                <span id="summary-discount" class="font-semibold font-mono">0%</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Add-ons Total:</span>
+                <span id="summary-addons" class="font-semibold font-mono">$0.00</span>
+              </div>
+            </div>
+
+            <div class="pt-6 border-t border-emerald-800 flex justify-between items-baseline">
+              <span class="text-base font-bold">Estimated Total:</span>
+              <span id="estimated-total" class="text-3xl font-serif font-bold text-gold-500 font-mono">$260.00</span>
+            </div>
+          </div>
+
+          <div class="pt-8">
+            <button type="button" id="btn-submit-booking" class="w-full py-4 rounded-full text-white font-bold bg-gradient-to-r from-gold-600 to-gold-700 hover:from-gold-700 hover:to-gold-700 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 min-h-[48px] flex items-center justify-center">
+              Request Booking Now
+            </button>
+            <p class="text-center text-xs text-emerald-200/60 mt-3">
+              Pressing submits estimate to dispatch via secure email draft.
+            </p>
+          </div>
+        </div>
+
+        <!-- Relatable Context Photo Card -->
+        <div class="bg-white p-2 rounded-2xl shadow-lg border border-gray-200">
+          <img src="assets/images/happy_customer.png" alt="DFW customer relaxing" class="rounded-xl w-full h-[250px] object-cover">
+          <div class="p-6 text-center space-y-2 font-sans">
+            <h4 class="font-serif text-lg font-bold text-emerald-900">Reclaim Your Weekends</h4>
+            <p class="text-xs text-gray-500 leading-relaxed">
+              Why spend your Saturdays scrubbing bathrooms? Our trusted cleaning professionals handle the details so you can enjoy Fort Worth with your loved ones.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COHESIVE FOOTER -->
+  <footer class="bg-emerald-950 text-white pt-16 pb-8 border-t border-gold-600/20 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <!-- About / Brand Column -->
+      <div class="space-y-6">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full border-2 border-gold-500 flex items-center justify-center bg-emerald-900">
+            <span class="font-serif text-xl font-bold text-gold-500">K</span>
+          </div>
+          <span class="font-serif text-lg font-bold text-white">Madame Katherine's</span>
+        </a>
+        <p class="text-sm text-emerald-100 font-sans leading-relaxed">
+          Affordable, thorough, and highly reliable premium home and commercial cleaning solutions throughout Fort Worth and the DFW Metroplex.
+        </p>
+        <div class="flex items-center gap-4 text-emerald-100">
+          <span class="w-10 h-10 rounded-full border border-emerald-800 flex items-center justify-center bg-emerald-900"><i class="fa-brands fa-facebook-f"></i></span>
+          <span class="w-10 h-10 rounded-full border border-emerald-800 flex items-center justify-center bg-emerald-900"><i class="fa-brands fa-instagram"></i></span>
+          <span class="w-10 h-10 rounded-full border border-emerald-800 flex items-center justify-center bg-emerald-900"><i class="fa-brands fa-yelp"></i></span>
+        </div>
+      </div>
+
+      <!-- Links Column -->
+      <div>
+        <h4 class="font-serif text-lg font-bold text-gold-500 mb-6 border-b border-gold-600/20 pb-2">Quick Navigation</h4>
+        <ul class="space-y-3 font-sans text-sm text-emerald-100">
+          <li><a href="index.html" class="hover:text-gold-500 transition-colors">Home</a></li>
+          <li><a href="services.html" class="hover:text-gold-500 transition-colors">Cleaning Services</a></li>
+          <li><a href="about.html" class="hover:text-gold-500 transition-colors">About Our Team</a></li>
+          <li><a href="locations.html" class="hover:text-gold-500 transition-colors">DFW Locations</a></li>
+          <li><a href="booking.html" class="hover:text-gold-500 transition-colors">Quote & Booking</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info Column -->
+      <div>
+        <h4 class="font-serif text-lg font-bold text-gold-500 mb-6 border-b border-gold-600/20 pb-2">Contact Details</h4>
+        <ul class="space-y-4 font-sans text-sm text-emerald-100">
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-phone text-gold-500 mt-1"></i>
+            <div>
+              <p class="font-semibold text-white">Call Us Directly</p>
+              <a href="tel:+16823198761" class="hover:text-gold-500 transition-colors font-mono">(682) 319-8761</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-envelope text-gold-500 mt-1"></i>
+            <div>
+              <p class="font-semibold text-white">Send Direct Email</p>
+              <a href="mailto:MadameKatherines71@gmail.com" class="hover:text-gold-500 transition-colors">MadameKatherines71@gmail.com</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-calendar-days text-gold-500 mt-1"></i>
+            <div>
+              <p class="font-semibold text-white">Hours of Operation</p>
+              <p>Monday - Saturday: 8:00 AM - 6:00 PM</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Service Radius Map Link / Locations Column -->
+      <div>
+        <h4 class="font-serif text-lg font-bold text-gold-500 mb-6 border-b border-gold-600/20 pb-2">DFW Service Territories</h4>
+        <div class="grid grid-cols-2 gap-2 text-xs font-sans text-emerald-100">
+          <a href="locations.html" class="hover:text-gold-500 transition-colors">Hurst (HEB)</a>
+          <a href="locations.html" class="hover:text-gold-500 transition-colors">Euless</a>
+          <a href="locations.html" class="hover:text-gold-500 transition-colors">Bedford</a>
+          <a href="locations.html" class="hover:text-gold-500 transition-colors">Arlington</a>
+          <a href="locations.html" class="hover:text-gold-500 transition-colors">Grand Prairie</a>
+          <a href="locations.html" class="hover:text-gold-500 transition-colors">Saginaw</a>
+          <a href="locations.html" class="hover:text-gold-500 transition-colors">Crowley</a>
+          <a href="locations.html" class="hover:text-gold-500 transition-colors">Carrollton</a>
+          <a href="locations.html" class="hover:text-gold-500 transition-colors col-span-2">Johnson & Wise Counties</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Baseline -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-emerald-900 text-center text-xs text-emerald-200/80 font-sans flex flex-col md:flex-row justify-between items-center gap-4">
+      <p>© 2026 Madame Katherine's Quality Cleaning Services. All Rights Reserved. Fully Licensed & Insured in Texas.</p>
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield text-gold-500"></i> DFW Protected</span>
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-leaf text-gold-500"></i> Safe Eco Products</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Mobile Menu & Pricing Calculator Engine -->
+  <script>
+    // Mobile Navigation Drawer Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Pricing Calculator Elements
+    const selectBeds = document.getElementById('beds-count');
+    const inputBath = document.getElementById('bath-count');
+    const btnBathMinus = document.getElementById('btn-bath-minus');
+    const btnBathPlus = document.getElementById('btn-bath-plus');
+    
+    // Summary Fields
+    const summaryBasePrice = document.getElementById('summary-base-price');
+    const summaryBathPrice = document.getElementById('summary-bath-price');
+    const summaryModifier = document.getElementById('summary-modifier');
+    const summaryDiscount = document.getElementById('summary-discount');
+    const summaryAddons = document.getElementById('summary-addons');
+    const labelEstimatedTotal = document.getElementById('estimated-total');
+
+    // Addons inputs
+    const checkOven = document.getElementById('add-oven');
+    const checkFridge = document.getElementById('add-fridge');
+    const checkCabinets = document.getElementById('add-cabinets');
+    const checkWindows = document.getElementById('add-windows');
+    const checkBuffing = document.getElementById('add-buffing');
+    const checkShampoo = document.getElementById('add-shampoo');
+
+    let bathCount = 2;
+
+    // Bathrooms counter listeners
+    btnBathMinus.addEventListener('click', () => {
+      if (bathCount > 1) {
+        bathCount--;
+        inputBath.value = bathCount;
+        calculateCost();
+      }
+    });
+
+    btnBathPlus.addEventListener('click', () => {
+      bathCount++;
+      inputBath.value = bathCount;
+      calculateCost();
+    });
+
+    // Generic recalculation trigger on modifications
+    selectBeds.addEventListener('change', calculateCost);
+    
+    document.querySelectorAll('input[name="clean-type"]').forEach(input => {
+      input.addEventListener('change', calculateCost);
+    });
+
+    document.querySelectorAll('input[name="clean-frequency"]').forEach(input => {
+      input.addEventListener('change', calculateCost);
+    });
+
+    [checkOven, checkFridge, checkCabinets, checkWindows, checkBuffing, checkShampoo].forEach(checkbox => {
+      checkbox.addEventListener('change', calculateCost);
+    });
+
+    function calculateCost() {
+      // 1. Base rooms
+      const baseBedPrice = parseFloat(selectBeds.value);
+      
+      // 2. Bathrooms count
+      const bathPrice = bathCount * 35;
+
+      // 3. Clean type modifier
+      const activeTypeRadio = document.querySelector('input[name="clean-type"]:checked');
+      const typeMult = parseFloat(activeTypeRadio.value);
+
+      // 4. Frequency Discount
+      const activeFreqRadio = document.querySelector('input[name="clean-frequency"]:checked');
+      const discount = parseFloat(activeFreqRadio.value);
+
+      // 5. Add-ons
+      let addonsTotal = 0;
+      if (checkOven.checked) addonsTotal += parseFloat(checkOven.value);
+      if (checkFridge.checked) addonsTotal += parseFloat(checkFridge.value);
+      if (checkCabinets.checked) addonsTotal += parseFloat(checkCabinets.value);
+      if (checkWindows.checked) addonsTotal += parseFloat(checkWindows.value);
+      if (checkBuffing.checked) addonsTotal += parseFloat(checkBuffing.value);
+      if (checkShampoo.checked) addonsTotal += parseFloat(checkShampoo.value);
+
+      // Cost Formula: Cost = (((Base_Bed + (Bath_Count * 35)) * Type_Mult) * (1 - Discount)) + Add_ons
+      const subtotal = (baseBedPrice + bathPrice) * typeMult;
+      const discounted = subtotal * (1 - discount);
+      const totalCost = discounted + addonsTotal;
+
+      // Update Estimate Summary Card UI
+      summaryBasePrice.textContent = `$${baseBedPrice.toFixed(2)}`;
+      summaryBathPrice.textContent = `$${bathPrice.toFixed(2)}`;
+      summaryModifier.textContent = `${typeMult.toFixed(1)}x`;
+      summaryDiscount.textContent = `${(discount * 100).toFixed(0)}%`;
+      summaryAddons.textContent = `$${addonsTotal.toFixed(2)}`;
+      labelEstimatedTotal.textContent = `$${totalCost.toFixed(2)}`;
+    }
+
+    // Submit Action Mailto compiler
+    const btnSubmit = document.getElementById('btn-submit-booking');
+    btnSubmit.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      // Check form validations
+      const name = document.getElementById('client-name').value.trim();
+      const phone = document.getElementById('client-phone').value.trim();
+      const address = document.getElementById('client-address').value.trim();
+
+      if (!name || !phone || !address) {
+        alert("Please complete your Contact Details (Name, Phone, and Address) before submitting your quote request.");
+        return;
+      }
+
+      // Gather current calculation details
+      const activeBedText = selectBeds.options[selectBeds.selectedIndex].text;
+      const activeTypeLabel = document.querySelector('input[name="clean-type"]:checked').nextElementSibling.querySelector('p').textContent;
+      const activeFreqLabel = document.querySelector('input[name="clean-frequency"]:checked').nextElementSibling.querySelector('p').textContent;
+      const costEstimate = labelEstimatedTotal.textContent;
+
+      let chosenAddons = [];
+      if (checkOven.checked) chosenAddons.push("Inside Oven ($25)");
+      if (checkFridge.checked) chosenAddons.push("Inside Fridge ($25)");
+      if (checkCabinets.checked) chosenAddons.push("Inside Cabinets ($30)");
+      if (checkWindows.checked) chosenAddons.push("Inside Windows ($40)");
+      if (checkBuffing.checked) chosenAddons.push("Floor Buffing ($70)");
+      if (checkShampoo.checked) chosenAddons.push("Carpet Shampooing ($80)");
+      const addonsString = chosenAddons.length > 0 ? chosenAddons.join(", ") : "None";
+
+      // Build Mailto payload
+      const emailRecipient = "MadameKatherines71@gmail.com";
+      const emailSubject = `Cleaning Quote Request - ${name}`;
+      
+      const emailBody = `Hello Madame Katherine's Quality Cleaning Services,
+
+I would like to request a cleaning service booking. Below are the details calculated from your online estimate tool:
+
+CONTACT INFO:
+- Name: ${name}
+- Phone: ${phone}
+- Service Address: ${address}
+
+CLEANING CONFIGURATION:
+- Bedrooms: ${activeBedText}
+- Bathrooms: ${bathCount} bathroom(s)
+- Cleaning Type: ${activeTypeLabel}
+- Frequency: ${activeFreqLabel}
+- Selected Add-ons: ${addonsString}
+
+ESTIMATED COST:
+- Total Cost Estimate: ${costEstimate}
+
+Please contact me to confirm the schedule and complete my reservation.
+
+Thank you!
+`;
+
+      const mailtoUrl = `mailto:${emailRecipient}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = mailtoUrl;
+    });
+
+    // Initialize pricing on load
+    calculateCost();
+  </script>
+</body>
+</html>

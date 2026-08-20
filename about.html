@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Madame Katherine's Quality Cleaning Services</title>
+  <meta name="description" content="Learn about the story behind Madame Katherine's Quality Cleaning Services. Trustworthy, insured, licensed, eco-friendly cleaners serving Fort Worth.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emerald: {
+              950: '#1e0b3d',
+              900: '#2e1065',
+              850: '#3b0764',
+              800: '#4c1d95',
+              700: '#6d28d9',
+              200: '#e9d5ff',
+              100: '#f3e8ff',
+              50: '#faf5ff',
+            },
+            gold: {
+              700: '#b45309',
+              600: '#d97706',
+              500: '#f59e0b',
+              100: '#fef3c7',
+            }
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen text-gray-800">
+
+  <!-- TOP BAR -->
+  <div class="bg-emerald-900 text-white py-2 px-4 text-sm font-sans">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-gold-500"></i> Licensed & Insured</span>
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-award text-gold-500"></i> 100% Satisfaction Guarantee</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="hidden md:inline"><i class="fa-regular fa-clock text-gold-500"></i> Monday - Saturday</span>
+        <a href="tel:+16823198761" class="text-gold-500 hover:text-gold-100 font-semibold flex items-center gap-1.5 transition">
+          <i class="fa-solid fa-phone"></i> (682) 319-8761
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY HEADER -->
+  <header class="sticky top-0 z-50 glass shadow-sm border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-full border-2 border-gold-600 flex items-center justify-content-center bg-emerald-900 shadow-md group-hover:scale-105 transition-transform duration-300">
+          <span class="font-serif text-2xl font-bold text-gold-500 tracking-wider flex items-center justify-center w-full h-full">K</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-lg md:text-xl font-bold text-emerald-900 leading-tight">Madame Katherine's</span>
+          <span class="text-xs uppercase tracking-widest text-gold-700 font-semibold">Quality Cleaning Services</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-8 font-sans font-medium text-gray-700">
+        <a href="index.html" class="hover:text-emerald-800 pb-1 transition-colors">Home</a>
+        <a href="services.html" class="hover:text-emerald-800 pb-1 transition-colors">Services</a>
+        <a href="about.html" class="text-emerald-800 border-b-2 border-gold-600 pb-1">About Us</a>
+        <a href="locations.html" class="hover:text-emerald-800 pb-1 transition-colors">Locations</a>
+        <a href="booking.html" class="hover:text-emerald-800 pb-1 transition-colors">Book Now</a>
+      </nav>
+
+      <!-- CTA Action Button -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="booking.html" class="px-5 py-2.5 rounded-full text-white font-medium bg-gradient-to-r from-emerald-800 to-emerald-950 hover:from-emerald-900 hover:to-emerald-950 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 min-h-[48px] flex items-center">
+          Calculate Instantly
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md text-emerald-900 hover:bg-emerald-50 focus:outline-none min-w-[48px] min-h-[48px]" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-200 bg-white">
+      <div class="px-4 py-3 space-y-2">
+        <a href="index.html" class="block px-3 py-2.5 rounded-md text-base font-medium text-gray-700 hover:text-emerald-900 hover:bg-emerald-50">Home</a>
+        <a href="services.html" class="block px-3 py-2.5 rounded-md text-base font-medium text-gray-700 hover:text-emerald-900 hover:bg-emerald-50">Services</a>
+        <a href="about.html" class="block px-3 py-2.5 rounded-md text-base font-medium text-emerald-900 bg-emerald-50">About Us</a>
+        <a href="locations.html" class="block px-3 py-2.5 rounded-md text-base font-medium text-gray-700 hover:text-emerald-900 hover:bg-emerald-50">Locations</a>
+        <a href="booking.html" class="block px-3 py-2.5 rounded-md text-base font-medium text-gray-700 hover:text-emerald-900 hover:bg-emerald-50">Book Now</a>
+        <div class="pt-4 border-t border-gray-200 flex flex-col gap-3">
+          <a href="tel:+16823198761" class="text-center py-2.5 rounded-md border-2 border-emerald-800 text-emerald-800 font-semibold flex items-center justify-center gap-2 min-h-[48px]">
+            <i class="fa-solid fa-phone"></i> Call (682) 319-8761
+          </a>
+          <a href="booking.html" class="text-center py-2.5 rounded-md bg-gradient-to-r from-gold-600 to-gold-700 text-white font-semibold flex items-center justify-center min-h-[48px]">
+            Calculate Instantly
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BRAND STORYTELLING BLOCK -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
+      <!-- Image Section (Left) -->
+      <div class="lg:col-span-6 relative">
+        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-gold-600 to-emerald-800 opacity-20 blur-xl"></div>
+        <img src="assets/images/cleaner_detailing.png" alt="Madame Katherine's professional local cleaning team" class="relative rounded-2xl w-full h-[450px] object-cover shadow-xl border border-gray-100">
+      </div>
+
+      <!-- Narrative Section (Right) -->
+      <div class="lg:col-span-6 space-y-6">
+        <span class="text-gold-700 font-semibold tracking-wider uppercase text-sm">About Us</span>
+        <h1 class="font-serif text-3xl sm:text-4xl font-bold text-emerald-900">About Madame Katherine's Quality Cleaning Services</h1>
+        <div class="h-1 w-20 bg-gold-600"></div>
+        
+        <p class="text-gray-600 leading-relaxed font-sans">
+          At Madame Katherine's Quality Cleaning Services, we believe a clean environment creates peace of mind. We proudly provide dependable residential and commercial cleaning services throughout the Dallas-Fort Worth Metroplex and surrounding communities.
+        </p>
+
+        <p class="text-gray-600 leading-relaxed font-sans">
+          Founded on the principles of quality, integrity, and attention to detail, our mission is simple: deliver exceptional cleaning services that exceed expectations every time. Whether we're cleaning a family home, apartment, office, or commercial property, we approach every job with professionalism and care.
+        </p>
+
+        <p class="text-gray-600 leading-relaxed font-sans">
+          As a locally owned business, we understand the importance of trust. Our clients rely on us to maintain clean, healthy, and welcoming spaces, and we take that responsibility seriously. We use proven cleaning methods, quality products, and personalized service plans designed to meet the unique needs of each customer.
+        </p>
+
+        <p class="text-gray-600 leading-relaxed font-sans font-semibold text-emerald-900">
+          We proudly serve DFW, HEB, Arlington, Grand Prairie, Euless, Saginaw, Crowley, Johnson County, Carrollton, Wise County, and surrounding areas.
+        </p>
+
+        <p class="text-gray-600 leading-relaxed font-sans">
+          When you choose Madame Katherine's Quality Cleaning Services, you're choosing reliability, professionalism, and a commitment to excellence. We look forward to helping you enjoy a cleaner, healthier space.
+        </p>
+
+        <div class="pt-4 border-t border-gray-100 flex flex-col gap-2">
+          <p class="font-serif text-lg font-bold text-emerald-950">Madame Katherine's Quality Cleaning Services</p>
+          <a href="tel:+16823198762" class="text-gold-700 hover:text-gold-600 font-bold flex items-center gap-2 text-lg">
+            <i class="fa-solid fa-phone"></i> 682-319-8762
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VERIFICATION SHOWCASE -->
+  <section class="py-16 bg-emerald-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-4">Our Verification & Trust Standards</h2>
+        <div class="h-1 w-20 bg-gold-500 mx-auto mb-4"></div>
+        <p class="text-emerald-100 font-sans text-lg">
+          Your safety, protection, and complete satisfaction are our highest priorities. Here are the credentials we bring to every job.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Shield Badge -->
+        <div class="bg-emerald-850/60 p-8 rounded-xl border border-emerald-800 text-center flex flex-col items-center">
+          <div class="w-16 h-16 rounded-full bg-gold-500/10 text-gold-500 flex items-center justify-center mb-6">
+            <i class="fa-solid fa-shield-halved text-2xl"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold mb-2">Fully Licensed</h3>
+          <p class="text-emerald-100 text-sm leading-relaxed">
+            Registered and operating legally within the State of Texas and DFW municipalities.
+          </p>
+        </div>
+
+        <!-- Insurance Badge -->
+        <div class="bg-emerald-850/60 p-8 rounded-xl border border-emerald-800 text-center flex flex-col items-center">
+          <div class="w-16 h-16 rounded-full bg-gold-500/10 text-gold-500 flex items-center justify-center mb-6">
+            <i class="fa-solid fa-file-shield text-2xl"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold mb-2">Professionally Insured</h3>
+          <p class="text-emerald-100 text-sm leading-relaxed">
+            Comprehensive liability coverage protect your valuable property and assets.
+          </p>
+        </div>
+
+        <!-- Background Vetted -->
+        <div class="bg-emerald-850/60 p-8 rounded-xl border border-emerald-800 text-center flex flex-col items-center">
+          <div class="w-16 h-16 rounded-full bg-gold-500/10 text-gold-500 flex items-center justify-center mb-6">
+            <i class="fa-solid fa-user-shield text-2xl"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold mb-2">Background Vetted</h3>
+          <p class="text-emerald-100 text-sm leading-relaxed">
+            Every specialist undergoes rigorous background screening before stepping inside your space.
+          </p>
+        </div>
+
+        <!-- Eco-Friendly -->
+        <div class="bg-emerald-850/60 p-8 rounded-xl border border-emerald-800 text-center flex flex-col items-center">
+          <div class="w-16 h-16 rounded-full bg-gold-500/10 text-gold-500 flex items-center justify-center mb-6">
+            <i class="fa-solid fa-leaf text-2xl"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold mb-2">Eco-Friendly</h3>
+          <p class="text-emerald-100 text-sm leading-relaxed">
+            Organic, non-toxic products safe for children, pets, employees, and the environment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA CTA -->
+  <section class="py-16 bg-white border-t border-gray-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <h2 class="font-serif text-3xl font-bold text-emerald-900">Experience the Madame Katherine Difference</h2>
+      <p class="text-gray-600 max-w-lg mx-auto">
+        Allow us to show you why local families and corporate offices trust us with their spaces.
+      </p>
+      <div class="flex justify-center gap-4">
+        <a href="booking.html" class="px-8 py-4 rounded-full text-white font-bold bg-gradient-to-r from-emerald-800 to-emerald-950 hover:from-emerald-900 hover:to-emerald-950 shadow-md min-h-[48px] flex items-center justify-center">Get a Free Estimate</a>
+        <a href="tel:+16823198761" class="px-8 py-4 rounded-full text-emerald-900 font-bold border-2 border-emerald-800 hover:bg-emerald-50 min-h-[48px] flex items-center justify-center gap-2">
+          <i class="fa-solid fa-phone"></i> Call (682) 319-8761
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COHESIVE FOOTER -->
+  <footer class="bg-emerald-950 text-white pt-16 pb-8 border-t border-gold-600/20 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <!-- About / Brand Column -->
+      <div class="space-y-6">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full border-2 border-gold-500 flex items-center justify-center bg-emerald-900">
+            <span class="font-serif text-xl font-bold text-gold-500">K</span>
+          </div>
+          <span class="font-serif text-lg font-bold text-white">Madame Katherine's</span>
+        </a>
+        <p class="text-sm text-emerald-100 font-sans leading-relaxed">
+          Affordable, thorough, and highly reliable premium home and commercial cleaning solutions throughout Fort Worth and the DFW Metroplex.
+        </p>
+        <div class="flex items-center gap-4 text-emerald-100">
+          <span class="w-10 h-10 rounded-full border border-emerald-800 flex items-center justify-center bg-emerald-900"><i class="fa-brands fa-facebook-f"></i></span>
+          <span class="w-10 h-10 rounded-full border border-emerald-800 flex items-center justify-center bg-emerald-900"><i class="fa-brands fa-instagram"></i></span>
+          <span class="w-10 h-10 rounded-full border border-emerald-800 flex items-center justify-center bg-emerald-900"><i class="fa-brands fa-yelp"></i></span>
+        </div>
+      </div>
+
+      <!-- Links Column -->
+      <div>
+        <h4 class="font-serif text-lg font-bold text-gold-500 mb-6 border-b border-gold-600/20 pb-2">Quick Navigation</h4>
+        <ul class="space-y-3 font-sans text-sm text-emerald-100">
+          <li><a href="index.html" class="hover:text-gold-500 transition-colors">Home</a></li>
+          <li><a href="services.html" class="hover:text-gold-500 transition-colors">Cleaning Services</a></li>
+          <li><a href="about.html" class="hover:text-gold-500 transition-colors">About Our Team</a></li>
+          <li><a href="locations.html" class="hover:text-gold-500 transition-colors">DFW Locations</a></li>
+          <li><a href="booking.html" class="hover:text-gold-500 transition-colors">Quote & Booking</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info Column -->
+      <div>
+        <h4 class="font-serif text-lg font-bold text-gold-500 mb-6 border-b border-gold-600/20 pb-2">Contact Details</h4>
+        <ul class="space-y-4 font-sans text-sm text-emerald-100">
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-phone text-gold-500 mt-1"></i>
+            <div>
+              <p class="font-semibold text-white">Call Us Directly</p>
+              <a href="tel:+16823198761" class="hover:text-gold-500 transition-colors font-mono">(682) 319-8761</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-envelope text-gold-500 mt-1"></i>
+            <div>
+              <p class="font-semibold text-white">Send Direct Email</p>
+              <a href="mailto:MadameKatherines71@gmail.com" class="hover:text-gold-500 transition-colors">MadameKatherines71@gmail.com</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-calendar-days text-gold-500 mt-1"></i>
+            <div>
+              <p class="font-semibold text-white">Hours of Operation</p>
+              <p>Monday - Saturday: 8:00 AM - 6:00 PM</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Service Radius Map Link / Locations Column -->
+      <div>
+        <h4 class="font-serif text-lg font-bold text-gold-500 mb-6 border-b border-gold-600/20 pb-2">DFW Service Territories</h4>
+        <div class="grid grid-cols-2 gap-2 text-xs font-sans text-emerald-100">
+          <a href="locations.html" class="hover:text-gold-500 transition-colors">Hurst (HEB)</a>
+          <a href="locations.html" class="hover:text-gold-500 transition-colors">Euless</a>
+          <a href="locations.html" class="hover:text-gold-500 transition-colors">Bedford</a>
+          <a href="locations.html" class="hover:text-gold-500 transition-colors">Arlington</a>
+          <a href="locations.html" class="hover:text-gold-500 transition-colors">Grand Prairie</a>
+          <a href="locations.html" class="hover:text-gold-500 transition-colors">Saginaw</a>
+          <a href="locations.html" class="hover:text-gold-500 transition-colors">Crowley</a>
+          <a href="locations.html" class="hover:text-gold-500 transition-colors">Carrollton</a>
+          <a href="locations.html" class="hover:text-gold-500 transition-colors col-span-2">Johnson & Wise Counties</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Baseline -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-emerald-900 text-center text-xs text-emerald-200/80 font-sans flex flex-col md:flex-row justify-between items-center gap-4">
+      <p>© 2026 Madame Katherine's Quality Cleaning Services. All Rights Reserved. Fully Licensed & Insured in Texas.</p>
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield text-gold-500"></i> DFW Protected</span>
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-leaf text-gold-500"></i> Safe Eco Products</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Mobile Menu -->
+  <script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
