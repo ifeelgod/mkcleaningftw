@@ -1,0 +1,9 @@
+{
+  "name": "madame-katherines-cleaning",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Madame Katherine's Quality Cleaning Services website and serverless quote API",
+  "dependencies": {
+    "nodemailer": "^6.10.0"
+  }
+}
